@@ -23,6 +23,7 @@
 
 require_once "lib/core/lhcore/password.php";
 require_once "ezcomponents/Base/src/base.php"; // dependent on installation method, see below
+require_once "log.php";
 
 ezcBase::addClassRepository( './','./lib/autoloads');
 

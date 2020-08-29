@@ -64,6 +64,8 @@ class erLhcoreClassTemplate {
 
     public static function getInstance($file = null)
     {
+		write_log('erLhcoreClassTemplate::getInstance - '.$file);
+
         if ( is_null( self::$instance ) )
         {
             self::$instance = new erLhcoreClassTemplate($file);

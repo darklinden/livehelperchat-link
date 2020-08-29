@@ -2,7 +2,14 @@
     <?php include(erLhcoreClassDesign::designtpl('lhchat/chat_not_available.tpl.php'));?>
 <?php else : ?>
 <script>
+    window.onload = function() {
+        console.log('start.tpl.php load');
+    };
+
     window.initializeLHC = "lhc_init:"+JSON.stringify(<?php
+        $id = $id ? $id : ($_GET['chatid'] ? $_GET['chatid'] : null);
+        $hash = $hash ? $hash : ( $_GET['chathash'] ? $_GET['chathash'] : null);
+
         $params = array(
             'mode' => $mode,
             'onlineStatus' => $online,
